@@ -324,12 +324,18 @@ mod tests {
         assert_eq!(get_env_or("OPTIONAL_ENV", 123u32, false), 123);
         assert_eq!(get_env_or_default::<u32>("OPTIONAL_ENV", false), 0);
 
-        // SAFETY:
+        // SAFETY: Unit tests are run on the main thread.
         unsafe {
             env::set_var("OPTIONAL_ENV", "456");
         }
 
         assert_eq!(get_env_or("OPTIONAL_ENV", 123u32, false), 456);
         assert_eq!(get_env_or_default::<u32>("OPTIONAL_ENV", false), 456);
+
+        // Clean up:
+        // SAFETY: Unit tests are run on the main thread.
+        unsafe {
+            env::remove_var("OPTIONAL_ENV");
+        }
     }
 }
