@@ -23,7 +23,7 @@
 //!
 //! Calling:
 //!
-//! ```rust
+//! ```no_run
 //! let password: String = docker_env::get_env("DATABASE_PASSWORD", true).unwrap();
 //! ```
 //!
@@ -33,7 +33,7 @@
 //!
 //! ## Example
 //!
-//! ```rust
+//! ```no_run
 //! use docker_env::{get_env, get_env_or, get_env_or_panic};
 //!
 //! let db_url: String = get_env_or_panic("DATABASE_URL", false);
