@@ -1,0 +1,34 @@
+# Build artifacts:
+/target/
+/coverage/
+/nextest-run/
+
+# Dependency lock file (ignored for libraries):
+/Cargo.lock
+
+# Editor and IDE settings:
+.vscode/
+.idea/
+*.code-workspace
+
+# Temporary and backup files:
+**/*.rs.bk
+**/*~
+**/#*#
+**/.#*
+*.swp
+*.swo
+*.tmp
+
+# Operating system metadata:
+.DS_Store
+Thumbs.db
+
+# Test and secrets-related files:
+*.log
+*.temp
+*.test-secrets
+/secrets/
+
+# GitHub Actions local cache:
+/.github/.cache/

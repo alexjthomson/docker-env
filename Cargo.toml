@@ -1,0 +1,24 @@
+[package]
+name = "docker-env"
+description = "Typed environment variable and secret handling for Dockerised Rust apps."
+version = "0.1.0"
+edition = "2024"
+
+authors = ["Alex Thomson <alexjthomson1882@gmail.com>"]
+readme = "readme.md"
+repository = "https://github.com/alexjthomson/docker-env"
+license = "MIT"
+keywords = ["docker", "env", "secrets", "configuration", "kubernetes"]
+categories = ["config", "environment", "os", "command-line-utilities"]
+documentation = "https://docs.rs/docker-env"
+
+[dependencies]
+dotenv = { version = "0.15" }
+tracing = { version = "0.1" }
+
+[dev-dependencies]
+tempfile = { version = "3.19" }
+serial_test = { version = "3.2" }
+
+[package.metadata.docs.rs]
+all-features = true
