@@ -9,7 +9,7 @@ readme = "readme.md"
 repository = "https://github.com/alexjthomson/docker-env"
 license = "MIT"
 keywords = ["docker", "env", "secrets", "configuration", "kubernetes"]
-categories = ["config", "environment", "os", "command-line-utilities"]
+categories = ["configuration"]
 documentation = "https://docs.rs/docker-env"
 
 [dependencies]
